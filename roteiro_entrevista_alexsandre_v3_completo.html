@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiro Completo - Alexsandre F. V. Bastos | 60 minutos</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .insights-box {
+            background: #fff9c4;
+            border: 2px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .insights-box h3 {
+            margin-top: 0;
+            color: #f57c00;
+        }
+        
+        .phase {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .phase-title {
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            margin: -20px -20px 15px -20px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .time-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .presenter-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .presenter-box strong {
+            color: #1565c0;
+        }
+        
+        .question-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .deep-question {
+            background: #fce4ec;
+            border-left: 4px solid #e91e63;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+            font-weight: 500;
+        }
+        
+        .check-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+            padding: 15px;
+            background: #ffefd5;
+            border-radius: 6px;
+            border: 1px solid #ffb347;
+        }
+        
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 5px;
+            background: white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .check-item input {
+            margin-right: 8px;
+            margin-top: 2px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .behavior-analysis {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border: 2px solid #4caf50;
+        }
+        
+        .behavior-analysis h4 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+        
+        .score-section {
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border: 1px solid #4caf50;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .alert-box::before {
+            content: "⚠️ ";
+            font-weight: bold;
+        }
+        
+        .decision-box {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .decision-title {
+            color: #c62828;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .follow-up {
+            background: #fff9c4;
+            padding: 8px 12px;
+            margin: 10px 0;
+            border-left: 3px solid #fbc02d;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .notes-area {
+            width: 100%;
+            min-height: 60px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+        }
+        
+        .red-flag-item {
+            background: #ffcdd2;
+            padding: 8px;
+            margin: 5px 0;
+            border-left: 3px solid #f44336;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .green-flag-item {
+            background: #c8e6c9;
+            padding: 8px;
+            margin: 5px 0;
+            border-left: 3px solid #4caf50;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .phase {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="margin: 0;">ROTEIRO COMPLETO - ALEXSANDRE FERREIRA VALLE BASTOS</h1>
+        <p style="margin: 5px 0;">📍 Porto Alegre/RS | 💰 Pretensão: R$ 5.500 (PJ + Variável)</p>
+        <p style="margin: 5px 0; font-size: 14px;">📊 15+ anos experiência | CEO atual | Ex-Cielo, Credicard, PagueVeloz</p>
+        <p style="margin: 5px 0; font-size: 14px;">🎓 Direito (Uniderp 2020) + Teologia + TI | Gestor de 30+ pessoas</p>
+    </div>
+
+    <div class="insights-box">
+        <h3>🔍 Insights do LinkedIn para Explorar:</h3>
+        <ul style="margin: 5px 0;">
+            <li><strong>Gap temporal suspeito:</strong> PagBank só 2 anos 2 meses (ago/23 - presente)</li>
+            <li><strong>CEO da própria empresa:</strong> DMW Marketing desde 2010 (paralelo?)</li>
+            <li><strong>Experiência religiosa:</strong> Foi ministro eclesiástico (perfil ético/valores)</li>
+            <li><strong>Gestão de equipes:</strong> Liderou 30+ pessoas no CIAGROUP</li>
+            <li><strong>Múltiplas formações:</strong> Direito + Teologia + TI (dispersão ou versatilidade?)</li>
+            <li><strong>Foco B2B declarado:</strong> "empresas com faturamento entre 1 milhão/ano"</li>
+        </ul>
+    </div>
+
+    <!-- FASE 1: ABERTURA ESTENDIDA -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">0-8 MIN</span>
+            FASE 1: ABERTURA, APRESENTAÇÃO E PRIMEIRO TESTE
+        </div>
+        
+        <div class="presenter-box">
+            <strong>Lucas abre (2 min):</strong><br>
+            "Boa tarde, Alexsandre. Eu sou o Lucas, líder comercial, e este é o Weriqui, gestor de desenvolvimento. Antes de começarmos, deixa eu te dar um contexto rápido sobre nós:<br><br>
+            
+            O Grupo Vilela nasceu quando o Dr. Vilela, que foi Procurador da Fazenda Nacional por 20 anos, percebeu que empresas executadas fiscalmente precisavam de apoio preventivo. Hoje somos:<br>
+            • 2.000 colaboradores em 60 escritórios pelo Brasil<br>
+            • Especialistas em recuperação tributária e eficiência fiscal<br>
+            • Modelo 100% success fee - só ganhamos quando o cliente ganha<br>
+            • Média de R$ 2-5 milhões recuperados por cliente/ano<br>
+            • Clientes de R$ 10MM a R$ 1BI de faturamento<br><br>
+            
+            Agora, Alexsandre, você teve tempo para pesquisar sobre nós. O que mais chamou sua atenção e como você conecta isso com sua trajetória?"
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox" id="open1">
+                <label for="open1">Mencionou success fee/alinhamento de interesses</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox" id="open2">
+                <label for="open2">Conectou com experiência B2B empresarial</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox" id="open3">
+                <label for="open3">Citou complexidade tributária brasileira</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox" id="open4">
+                <label for="open4">Relacionou formação em Direito</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox" id="open5">
+                <label for="open5">Resposta genérica sem profundidade</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox" id="open6">
+                <label for="open6">Demonstrou ter estudado cases/números</label>
+            </div>
+        </div>
+        
+        <div class="behavior-analysis">
+            <h4>Análise Comportamental - Primeira Impressão:</h4>
+            <div class="check-grid" style="background: white; border: 1px solid #4caf50;">
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Oratória clara e estruturada</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Nervosismo perceptível</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Confiante demais (arrogante?)</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Tom professoral (explicativo)</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Escuta antes de responder</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Interrompe/ansioso para falar</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FASE 2: INVESTIGAÇÃO CEO/EMPREENDEDOR -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">8-15 MIN</span>
+            FASE 2: INVESTIGAÇÃO DO PERFIL EMPREENDEDOR
+        </div>
+        
+        <div class="deep-question">
+            <strong>Weriqui pergunta:</strong><br>
+            "Alexsandre, vejo que você é CEO da DMW Marketing desde 2010, mas também está no PagBank. Como funciona essa dupla atuação? A DMW ainda está ativa?"
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>"Empresa está inativa/pausada"</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>"Mantém paralelo mas sem dedicação"</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>"É minha principal fonte de renda"</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>"Pretendo encerrar para focar aqui"</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Ficou evasivo/não explicou claramente</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>"Uso para prestar serviços PJ"</label>
+            </div>
+        </div>
+        
+        <div class="follow-up">
+            <strong>Follow-up crucial:</strong> "Se a DMW está ativa há 15 anos, por que buscar emprego agora? O que mudou?"
+        </div>
+        
+        <div class="deep-question">
+            <strong>Lucas aprofunda:</strong><br>
+            "Você liderou equipes de 30+ pessoas no CIAGROUP e tem perfil empreendedor. Por que voltar a ser vendedor individual? Não é um retrocesso?"
+        </div>
+        
+        <div class="behavior-analysis">
+            <h4>Avaliar Resposta Emocional:</h4>
+            <div class="check-grid" style="background: white;">
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Demonstrou humildade genuína</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Ficou defensivo/justificou demais</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Admitiu dificuldades financeiras</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Focou em aprendizado/crescimento</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Resposta evasiva/romantizada</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="alert-box">
+            CRÍTICO: Se tem empresa ativa rentável + não explicou bem a transição = Alto risco de não ter foco
+        </div>
+    </div>
+
+    <!-- FASE 3: VALIDAÇÃO CIELO PROFUNDA -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">15-22 MIN</span>
+            FASE 3: VALIDAÇÃO DETALHADA DA EXPERIÊNCIA CIELO
+        </div>
+        
+        <div class="question-box">
+            <strong>Lucas:</strong><br>
+            "Vamos falar da Cielo em Campo Grande. Você ficou só 1 ano e 3 meses, mas alega ter expandido de R$500k para R$15 milhões. Explique mês a mês como isso aconteceu."
+        </div>
+        
+        <div class="deep-question">
+            <strong>Perguntas de Validação Específicas:</strong><br>
+            1. "Qual era sua meta mensal em reais?"<br>
+            2. "Quantos clientes você herdou vs. conquistou?"<br>
+            3. "Qual o maior cliente individual que você fechou?"<br>
+            4. "Esses R$15M eram TPV ou receita Cielo?"
+        </div>
+        
+        <textarea class="notes-area" placeholder="Anotar respostas específicas para validação posterior..."></textarea>
+        
+        <div class="follow-up">
+            <strong>Teste de Consistência:</strong> "Se você era tão bem-sucedido na Cielo, por que saiu em apenas 1 ano?"
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Números fazem sentido matemático</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Confundiu TPV com receita</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Deu exemplos concretos verificáveis</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Ficou vago/genérico nos detalhes</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Justificou saída de forma coerente</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>História tem inconsistências</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- FASE 4: TESTE RELIGIOSO/ÉTICO -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">22-28 MIN</span>
+            FASE 4: VALORES E ÉTICA (BACKGROUND RELIGIOSO)
+        </div>
+        
+        <div class="presenter-box">
+            <strong>Weriqui explora perfil único:</strong><br>
+            "Alexsandre, você tem um perfil interessante - foi ministro religioso e tem formação em Teologia. Como essa experiência moldou sua forma de fazer negócios?"
+        </div>
+        
+        <div class="deep-question">
+            <strong>Pergunta Ética Situacional:</strong><br>
+            "Imagine: você está prestes a fechar uma venda de R$500k de fee. No último momento, descobre que o cliente pode ter problemas fiscais graves não relacionados ao nosso serviço. O que você faz?"
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Alertaria o cliente imediatamente</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Consultaria jurídico/compliance primeiro</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Fecharia a venda (não é problema nosso)</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Pediria orientação do gestor</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Tentaria resolver ambos os problemas</label>
+            </div>
+        </div>
+        
+        <div class="behavior-analysis">
+            <h4>Análise de Valores:</h4>
+            <div class="green-flag-item">✅ Se demonstrou ética acima de comissão</div>
+            <div class="red-flag-item">🚩 Se priorizou fechamento sobre integridade</div>
+        </div>
+    </div>
+
+    <!-- FASE 5: TESTE SPIN SELLING AVANÇADO -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">28-35 MIN</span>
+            FASE 5: TESTE SPIN SELLING COM COMPLEXIDADE
+        </div>
+        
+        <div class="presenter-box">
+            <strong>Lucas apresenta cenário:</strong><br>
+            "Alexsandre, vou ser um empresário gaúcho, dono de uma indústria de R$50M/ano. Acabei de dizer: 'Olha, já pago uma fortuna pro meu contador e advogado tributarista. Não preciso de mais um prestador de serviço.' Demonstre SPIN agora."
+        </div>
+        
+        <div class="score-section">
+            <h4>Avaliação SPIN em Tempo Real:</h4>
+            
+            <strong>SITUAÇÃO - Primeiras perguntas dele:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar perguntas de situação que ele fez..."></textarea>
+            
+            <strong>PROBLEMA - Como investigou dores:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar como ele descobriu problemas..."></textarea>
+            
+            <strong>IMPLICAÇÃO - Ampliou consequências:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar se ele dimensionou impactos..."></textarea>
+            
+            <strong>NECESSIDADE - Cliente verbalizou:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar se conseguiu fazer cliente pedir solução..."></textarea>
+        </div>
+        
+        <div class="follow-up">
+            <strong>Weriqui adiciona objeção:</strong> "Mas vocês são de São Paulo. Não conhecem a realidade do RS."
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Usou sua localização (POA) como vantagem</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Mencionou 60 escritórios/presença nacional</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Investigou especificidades regionais</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Ficou na defensiva</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- FASE 6: CICLO LONGO E COMPLEXIDADE -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">35-42 MIN</span>
+            FASE 6: TESTE DE PACIÊNCIA E CICLO COMPLEXO
+        </div>
+        
+        <div class="deep-question">
+            <strong>Lucas testa profundidade:</strong><br>
+            "Alexsandre, na sua experiência toda - Honda, NET, Cielo, Credicard - qual foi a venda mais complexa que você já fez? Não me fale o valor. Quero saber: quantos meses levou, quantas reuniões, quantos NÃOs você ouviu antes do SIM?"
+        </div>
+        
+        <textarea class="notes-area" rows="3" placeholder="Anotar história completa para avaliar veracidade e complexidade..."></textarea>
+        
+        <div class="follow-up">
+            <strong>Weriqui aprofunda:</strong> "Nessa venda complexa, em que momento você quase desistiu? E por que não desistiu?"
+        </div>
+        
+        <div class="behavior-analysis">
+            <h4>Análise de Resiliência e Storytelling:</h4>
+            <div class="check-grid" style="background: white;">
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>História tem começo, meio e fim claros</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Mencionou aprendizados específicos</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Demonstrou resiliência real</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>História parece ensaiada/genérica</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Admitiu erros no processo</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Focou só no sucesso final</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FASE 7: TESTE JURÍDICO-TRIBUTÁRIO -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">42-48 MIN</span>
+            FASE 7: APLICAÇÃO DO CONHECIMENTO JURÍDICO
+        </div>
+        
+        <div class="presenter-box">
+            <strong>Weriqui testa conhecimento:</strong><br>
+            "Você se formou em Direito em 2020. Rápido teste: Um cliente te pergunta: 'Qual a diferença entre elisão e evasão fiscal?' Você tem 30 segundos. Vai."
+        </div>
+        
+        <p style="font-style: italic; color: #666;">[CRONOMETRAR 30 SEGUNDOS]</p>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Explicou corretamente (elisão=legal)</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Usou exemplos práticos</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Linguagem adequada para leigo</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Muito técnico/confuso</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Não soube explicar claramente</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Ultrapassou 30 segundos</label>
+            </div>
+        </div>
+        
+        <div class="deep-question">
+            <strong>Lucas conecta com vendas:</strong><br>
+            "Como você usaria seu conhecimento jurídico para vender nossos serviços sem parecer um advogado chato?"
+        </div>
+        
+        <div class="behavior-analysis">
+            <h4>Capacidade de Simplificação:</h4>
+            <div class="green-flag-item">✅ Se traduziu complexidade em valor de negócio</div>
+            <div class="red-flag-item">🚩 Se ficou preso em tecnicalidades jurídicas</div>
+        </div>
+    </div>
+
+    <!-- FASE 8: CASE FINAL ELIMINATÓRIO -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">48-55 MIN</span>
+            FASE 8: CASE ELIMINATÓRIO COMPLETO
+        </div>
+        
+        <div class="presenter-box" style="background: #ffebee; border-color: #f44336;">
+            <strong>Lucas apresenta desafio final:</strong><br>
+            "Alexsandre, case real: Empresa gaúcha, R$80M/ano, setor metalúrgico. O CFO te diz: 'Já auditamos tudo com a Deloitte. Não tem nada para recuperar. E mesmo se tivesse, não confio em consultoria que só ganha se achar erro - vocês vão inventar problema.'<br><br>
+            
+            Weriqui adiciona: 'E ele complementa: Aliás, vocês não são advogados. Como vão questionar a Receita Federal?'<br><br>
+            
+            Você tem 2 minutos para responder. Pode pensar 30 segundos antes."
+        </div>
+        
+        <p style="font-style: italic; text-align: center; color: #666;">[CRONOMETRAR 30 SEGUNDOS DE PREPARAÇÃO]</p>
+        
+        <div class="score-section">
+            <h4>Estrutura da Resposta:</h4>
+            <strong>1. Como abordou ceticismo da Deloitte:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar abordagem..."></textarea>
+            
+            <strong>2. Como defendeu modelo success fee:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar argumentação..."></textarea>
+            
+            <strong>3. Como respondeu sobre não serem advogados:</strong>
+            <textarea class="notes-area" rows="2" placeholder="Anotar resposta..."></textarea>
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Fez perguntas antes de responder</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Respeitou Deloitte mas diferenciou</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Atacou concorrência</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Usou sua formação em Direito</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Criou urgência/FOMO</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Ofereceu diagnóstico gratuito</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Estruturou resposta em etapas</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Ficou defensivo/nervoso</label>
+            </div>
+        </div>
+        
+        <div class="decision-box">
+            <div class="decision-title">AVALIAÇÃO DO CASE:</div>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <label><input type="radio" name="case" value="1"> Excelente - pensamento consultivo</label>
+                <label><input type="radio" name="case" value="2"> Bom - pode desenvolver</label>
+                <label><input type="radio" name="case" value="3"> Mediano - muito produto</label>
+                <label><input type="radio" name="case" value="4"> Fraco - não tem perfil</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- FASE 9: PERGUNTAS DO CANDIDATO -->
+    <div class="phase">
+        <div class="phase-title">
+            <span class="time-badge">55-60 MIN</span>
+            FASE 9: INVERSÃO E FECHAMENTO
+        </div>
+        
+        <div class="question-box">
+            <strong>Weriqui:</strong><br>
+            "Alexsandre, agora é sua vez. Que perguntas você tem para nós? E por favor, não sejam perguntas que você poderia ter respondido pesquisando no Google."
+        </div>
+        
+        <div class="check-grid">
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Perguntou sobre metodologia de vendas interna</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Questionou perfil do top performer</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Investigou principais objeções dos clientes</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Perguntou sobre treinamento/capacitação</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Focou apenas em comissão/ganhos</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Questionou por que a vaga está aberta</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Perguntou sobre cultura/valores</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox">
+                <label>Quis saber próximos passos do processo</label>
+            </div>
+        </div>
+        
+        <div class="deep-question">
+            <strong>Lucas - Pergunta final reveladora:</strong><br>
+            "Alexsandre, você tem 15+ anos de experiência, já foi gestor, tem empresa própria. Seja brutalmente honesto: por que aceitar ser 'apenas' um vendedor aqui? O que você não está nos contando?"
+        </div>
+        
+        <div class="behavior-analysis">
+            <h4>Análise da Resposta Final:</h4>
+            <div class="check-grid" style="background: white;">
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Foi transparente sobre situação real</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Demonstrou humildade genuína</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Focou em aprendizado/crescimento</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Admitiu necessidade financeira</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Continuou evasivo/romantizando</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox">
+                    <label>Revelou informação importante nova</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AVALIAÇÃO FINAL CONSOLIDADA -->
+    <div class="phase" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <h2 style="text-align: center; margin-top: 0;">AVALIAÇÃO FINAL CONSOLIDADA</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0;">
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 6px;">
+                <h4 style="margin-top: 0;">TÉCNICAS</h4>
+                <select style="width: 100%; padding: 5px;">
+                    <option>Cielo validada (7-10)</option>
+                    <option>Cielo duvidosa (4-6)</option>
+                    <option>Cielo inconsistente (1-3)</option>
+                </select>
+                <select style="width: 100%; padding: 5px; margin-top: 8px;">
+                    <option>SPIN excelente (7-10)</option>
+                    <option>SPIN adequado (4-6)</option>
+                    <option>SPIN fraco (1-3)</option>
+                </select>
+                <select style="width: 100%; padding: 5px; margin-top: 8px;">
+                    <option>Jurídico útil (7-10)</option>
+                    <option>Jurídico ok (4-6)</option>
+                    <option>Jurídico irrelevante (1-3)</option>
+                </select>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 6px;">
+                <h4 style="margin-top: 0;">COMPORTAMENTAIS</h4>
+                <select style="width: 100%; padding: 5px;">
+                    <option>Comunicação excelente (7-10)</option>
+                    <option>Comunicação boa (4-6)</option>
+                    <option>Comunicação fraca (1-3)</option>
+                </select>
+                <select style="width: 100%; padding: 5px; margin-top: 8px;">
+                    <option>Alta resiliência (7-10)</option>
+                    <option>Resiliência média (4-6)</option>
+                    <option>Baixa resiliência (1-3)</option>
+                </select>
+                <select style="width: 100%; padding: 5px; margin-top: 8px;">
+                    <option>Perfil consultivo (7-10)</option>
+                    <option>Perfil misto (4-6)</option>
+                    <option>Perfil transacional (1-3)</option>
+                </select>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 6px;">
+                <h4 style="margin-top: 0;">FIT CULTURAL</h4>
+                <select style="width: 100%; padding: 5px;">
+                    <option>Valores alinhados (7-10)</option>
+                    <option>Valores parciais (4-6)</option>
+                    <option>Valores conflitantes (1-3)</option>
+                </select>
+                <select style="width: 100%; padding: 5px; margin-top: 8px;">
+                    <option>Foco claro (7-10)</option>
+                    <option>Foco dividido (4-6)</option>
+                    <option>Sem foco (1-3)</option>
+                </select>
+                <select style="width: 100%; padding: 5px; margin-top: 8px;">
+                    <option>Comprometimento alto (7-10)</option>
+                    <option>Comprometimento médio (4-6)</option>
+                    <option>Comprometimento baixo (1-3)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div style="background: white; color: #2c3e50; padding: 20px; border-radius: 6px;">
+            <h3 style="margin-top: 0;">DECISÃO FINAL:</h3>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 15px 0;">
+                <label style="font-weight: bold;">
+                    <input type="radio" name="final" value="1" style="margin-right: 8px;">
+                    ✅ APROVAR - Avançar para presencial/campo
+                </label>
+                <label style="font-weight: bold;">
+                    <input type="radio" name="final" value="2" style="margin-right: 8px;">
+                    🤔 DÚVIDA - Necessita segunda entrevista focada
+                </label>
+                <label style="font-weight: bold;">
+                    <input type="radio" name="final" value="3" style="margin-right: 8px;">
+                    📁 BANCO - Guardar para oportunidade futura
+                </label>
+                <label style="font-weight: bold;">
+                    <input type="radio" name="final" value="4" style="margin-right: 8px;">
+                    ❌ REPROVAR - Não atende requisitos mínimos
+                </label>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <strong>Principal Razão da Decisão:</strong>
+                <textarea class="notes-area" rows="3" placeholder="Ex: Experiência Cielo validada, SPIN ok, mas preocupação com foco dividido pela empresa própria..."></textarea>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                <div>
+                    <strong>3 Pontos Fortes:</strong>
+                    <textarea class="notes-area" rows="3" placeholder="1. 
+2. 
+3."></textarea>
+                </div>
+                <div>
+                    <strong>3 Pontos de Atenção:</strong>
+                    <textarea class="notes-area" rows="3" placeholder="1. 
+2. 
+3."></textarea>
+                </div>
+            </div>
+            
+            <div style="margin-top: 15px; padding: 15px; background: #f0f0f0; border-radius: 6px;">
+                <strong>🎯 Próxima Ação Imediata:</strong>
+                <input type="text" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px;" 
+                       placeholder="Ex: Verificar referências Cielo com RH, agendar dia de campo, solicitar comprovação de números...">
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS DE ENCERRAMENTO -->
+    <div class="phase" style="background: #f8f9fa; border: 2px dashed #6c757d;">
+        <h3 style="margin-top: 0; color: #6c757d;">📝 SCRIPTS DE ENCERRAMENTO BASEADOS NA DECISÃO</h3>
+        
+        <div style="margin: 15px 0;">
+            <strong>✅ Se APROVADO:</strong>
+            <div class="presenter-box" style="background: #d4edda; border-color: #28a745;">
+                "Alexsandre, gostamos muito da conversa. Sua experiência comprovada em expansão de carteira, conhecimento de metodologias e formação em Direito são diferenciais importantes. Vamos avaliar internamente e em 48h retornamos para agendar um dia de campo presencial com o time comercial."
+            </div>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <strong>🤔 Se DÚVIDA:</strong>
+            <div class="presenter-box" style="background: #fff3cd; border-color: #ffc107;">
+                "Alexsandre, foi uma conversa muito produtiva. Identificamos pontos positivos na sua trajetória. Precisamos alinhar internamente alguns pontos e podemos precisar de uma segunda conversa mais específica. Retornamos em até 3 dias úteis."
+            </div>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <strong>❌ Se REPROVADO:</strong>
+            <div class="presenter-box" style="background: #f8d7da; border-color: #dc3545;">
+                "Alexsandre, agradecemos muito sua disponibilidade e transparência. Seu perfil é sólido, mas estamos avaliando todos os candidatos desta fase. Retornaremos em até uma semana com nossa decisão final. Muito obrigado!"
+            </div>
+        </div>
+    </div>
+
+    <!-- OBSERVAÇÕES FINAIS -->
+    <div class="phase">
+        <h3 style="margin-top: 0;">📌 OBSERVAÇÕES GERAIS DA ENTREVISTA</h3>
+        <textarea class="notes-area" style="min-height: 120px;" 
+                  placeholder="Red flags não previstas, insights especiais, comportamentos notados, contradições, pontos para investigar se avançar..."></textarea>
+        
+        <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 6px;">
+            <strong>Dados da Entrevista:</strong>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
+                <div>
+                    <label>Data: <input type="date" style="width: 100%;"></label>
+                </div>
+                <div>
+                    <label>Início: <input type="time" style="width: 100%;"></label>
+                </div>
+                <div>
+                    <label>Fim: <input type="time" style="width: 100%;"></label>
+                </div>
+            </div>
+            <div style="margin-top: 10px;">
+                <label>
+                    <input type="checkbox"> Candidato foi pontual
+                </label>
+                <label style="margin-left: 20px;">
+                    <input type="checkbox"> Câmera ligada todo tempo
+                </label>
+                <label style="margin-left: 20px;">
+                    <input type="checkbox"> Ambiente profissional
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: #2c3e50; color: white; border-radius: 8px;">
+        <p style="margin: 0; font-size: 18px;">
+            <strong>Roteiro Completo - 60 minutos</strong><br>
+            Candidato: Alexsandre Ferreira Valle Bastos<br>
+            Entrevistadores: Lucas (Comercial) + Weriqui (Tech/Processos)
+        </p>
+    </div>
+</body>
+</html>
